@@ -26,6 +26,11 @@ public class Car extends Vehicle{
     }
     
     @Override
+    public int getmaxSpeed(){
+        return maxSpeed;
+    }
+    
+    @Override
     public String toString(){
         StringBuilder sb = new StringBuilder(super.toString());
         sb.append("\nMax speed: " + this.maxSpeed + "km/h");

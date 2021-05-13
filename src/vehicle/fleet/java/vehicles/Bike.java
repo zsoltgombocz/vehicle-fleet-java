@@ -7,4 +7,9 @@ public class Bike extends Vehicle{
         
         super(c_price, c_color, c_weight, 1);
     }
+    
+    @Override
+    public int getmaxSpeed(){
+        return -1;
+    }
 }

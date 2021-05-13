@@ -66,6 +66,10 @@ abstract public class Vehicle{
         return this.maxPassengers;
     }
     
+    public int getmaxSpeed(){
+        return -1;
+    }
+    
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder("Basic information: \n");

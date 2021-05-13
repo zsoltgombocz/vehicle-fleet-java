@@ -151,13 +151,14 @@ public class VehicleFleetMainGUI extends javax.swing.JFrame {
         if(VehicleFleet.getInstance().amount() < 1){
             ResultLabel.setText("Not enough vehicle in the fleet!");
         }else{
-            int allPassenger = 0;
-            
-            for(int i = 0; i < VehicleFleet.getInstance().amount(); i++){
-                allPassenger += VehicleFleet.getVehicle(i).getPassengersAmount();
+            int res = 0;
+            try{
+                res = VehicleFleet.getInstance().calculate();
+            }catch(Exception e){
+                System.out.println(e.getMessage());
             }
             
-            ResultLabel.setText("The number of the maximum amount of passengers (driver incl.): " + allPassenger);
+            ResultLabel.setText("The number of the maximum amount of passengers that can be transported(driver incl.): " + res);
         }
     }
 
