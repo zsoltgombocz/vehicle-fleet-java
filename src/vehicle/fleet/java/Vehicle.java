@@ -1,5 +1,7 @@
 package vehicle.fleet.java;
-
+/**
+ * Szülő abstract osztály, amiből származnak majd a járművek.
+ */
 abstract public class Vehicle{
     private int price;
     private int color;
@@ -19,6 +21,14 @@ abstract public class Vehicle{
     11	Pink
     12	Tan
     */
+    /**
+     * Létrehoz egy típustalan járművet a legalapvetőbb paraméterekkel.
+     * @param c_price ár
+     * @param c_color szín
+     * @param c_weight súly
+     * @param c_maxPassengers szállítható emberek
+     * @throws IllegalArgumentException Nem megfelelő paraméterek esetán kiváltandó kivétel.
+     */
     public Vehicle(int c_price, int c_color, float c_weight, int c_maxPassengers) throws IllegalArgumentException{
         if(c_price <= 0) throw new IllegalArgumentException("Price must not be negative or zero!");
         if(c_color < 1 || c_color > 12) throw new IllegalArgumentException("Color must be between 1 and 12!");
@@ -30,7 +40,10 @@ abstract public class Vehicle{
         this.weight = c_weight;
         this.maxPassengers = c_maxPassengers;
     }
-    
+    /**
+     * Visszaadja a jármű színét.
+     * @return String
+     */
     public String getColor(){
         switch(this.color){
             case 1:
@@ -61,15 +74,24 @@ abstract public class Vehicle{
         
         return "Black";
     }
-    
+    /**
+     * Visszaadja a jármű szállítható személyeinek számát.
+     * @return maxPassengers változó.
+     */
     public int getPassengersAmount(){
         return this.maxPassengers;
     }
-    
+    /**
+     * Visszaadja a jármű maximális sebességét. Felüldefiniálása ajánlott, mert -1 sebességel nem fog számolni a program.
+     * @return alapból -1.
+     */
     public int getmaxSpeed(){
         return -1;
     }
-    
+    /**
+     * toString() metódus felülírása ay alapvető változók kiírásával.
+     * @return Egy String ami tárolja a változókat szöveghez fűzve.
+     */
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder("Basic information: \n");
@@ -84,7 +106,10 @@ abstract public class Vehicle{
         
         return sb.toString();
     }
-    
+    /**
+     * Visszaadja a jármű típusát az osztálynév alapján.
+     * @return String
+     */
     public String type(){
         return getClass().getSimpleName();
     }

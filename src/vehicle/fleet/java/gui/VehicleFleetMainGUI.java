@@ -8,7 +8,7 @@ package vehicle.fleet.java.gui;
 import vehicle.fleet.java.VehicleFleet;
 
 /**
- *
+ * Főmenű GUI.
  * @author zsolti-pc
  */
 public class VehicleFleetMainGUI extends javax.swing.JFrame {

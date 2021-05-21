@@ -1,13 +1,27 @@
 package vehicle.fleet.java.vehicles;
 import vehicle.fleet.java.Vehicle;
 
-
+/**
+ * Helikopter osztály ami a jármű szülőosztályából származik.
+ * @author zsolti-pc
+ */
 public class Helicopter extends Vehicle{
     private int maxSpeed;
     private int kmTraveled;
     private float consumption;
     private float maxWeight;
-    
+    /**
+     * Konstruktor
+     * @param c_price ár
+     * @param c_color szín
+     * @param c_weight súly
+     * @param c_maxPassengers szállítható személyek száma
+     * @param c_maxSpeed max sebesség
+     * @param c_kmTraveled megtett km
+     * @param c_consumption fogyasztás
+     * @param c_maxWeight szállítható súly
+     * @throws IllegalArgumentException Nem megfelelő intervallumba megadott paraméter esetén kiváltja.
+     */
     public Helicopter(int c_price, int c_color, float c_weight, int c_maxPassengers, 
             int c_maxSpeed, int c_kmTraveled, float c_consumption, float c_maxWeight) throws IllegalArgumentException{
         
@@ -24,12 +38,18 @@ public class Helicopter extends Vehicle{
         this.consumption = c_consumption;
         this.maxWeight = c_maxWeight;
     }
-    
+    /**
+     * Visszaadja a jármű maximális sebességét változó alapján.
+     * @return maxSpeed változó.
+     */
     @Override
     public int getmaxSpeed(){
         return maxSpeed;
     }
-    
+    /**
+     * toString() metódus kibővítése a szülőosztályból.
+     * @return Egy String ami tárolja a változókat szöveghez fűzve.
+     */
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder(super.toString());

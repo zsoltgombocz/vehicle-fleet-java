@@ -12,7 +12,7 @@ import vehicle.fleet.java.VehicleFleet;
 import vehicle.fleet.java.vehicles.*;
 
 /**
- *
+ * Jármű látrehozás GUI.
  * @author zsolti-pc
  */
 public class VehicleFleetAddGUI extends javax.swing.JFrame {

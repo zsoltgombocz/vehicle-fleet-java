@@ -1,7 +1,10 @@
 package vehicle.fleet.java.vehicles;
 import vehicle.fleet.java.Vehicle;
 
-
+/**
+ * Minibusz osztály ami a jármű szülőosztályából származik.
+ * @author zsolti-pc
+ */
 public class MiniBus extends Vehicle{
     private int maxSpeed;
     private int kmTraveled;
@@ -24,12 +27,18 @@ public class MiniBus extends Vehicle{
         this.consumption = c_consumption;
         this.maxWeight = c_maxWeight;
     }
-    
+    /**
+     * Visszaadja a jármű maximális sebességét változó alapján.
+     * @return maxSpeed változó.
+     */
     @Override
     public int getmaxSpeed(){
         return maxSpeed;
     }
-    
+    /**
+     * toString() metódus kibővítése a szülőosztályból.
+     * @return Egy String ami tárolja a változókat szöveghez fűzve.
+     */
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder(super.toString());

@@ -11,7 +11,7 @@ import javax.swing.JViewport;
 import vehicle.fleet.java.VehicleFleet;
 
 /**
- *
+ * Jármű listázás GUI.
  * @author zsolti-pc
  */
 public class VehicleFleetListGUI extends javax.swing.JFrame {
